@@ -5,6 +5,7 @@ public class BuildMenu : MonoBehaviour {
     // This is the GUI size
     public int width = 200;
     public int height = 35;
+    public float offset = -2.0f;
 
     // This is the castle prefab, to be set in the inspector
     public GameObject prefab;
@@ -27,7 +28,7 @@ public class BuildMenu : MonoBehaviour {
                     // Note: if your castle appears to be 'in' the Ground
                     //       instead of 'on' the ground, you may have to adjust
                     //       the y coordinate like so:
-                    //instance.transform.position += new Vector3(0, 1.23f, 0);
+                    instance.transform.position += new Vector3(0, offset, 0);
                 }
             }
             

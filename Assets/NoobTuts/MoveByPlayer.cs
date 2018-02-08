@@ -7,6 +7,8 @@ public class MoveByPlayer : MonoBehaviour {
     public GameObject circle;
     public NavMeshAgent agent;
 
+    public Vector3 dest;
+
     
     // Update is called once per frame
     void Update () {
@@ -19,6 +21,8 @@ public class MoveByPlayer : MonoBehaviour {
             {
                 //GetComponent<UnityEngine.AI.NavMeshAgent>().isStopped = false;
                 GetComponent<UnityEngine.AI.NavMeshAgent>().destination = hit.point;
+                dest = hit.point;
+
             }
         }
         /*
