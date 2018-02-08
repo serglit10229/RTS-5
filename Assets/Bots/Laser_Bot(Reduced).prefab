@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 195647951160862986}
   - component: {fileID: 65960310889605254}
   - component: {fileID: 54372430768646300}
+  - component: {fileID: 114285562304755192}
   m_Layer: 0
   m_Name: Laser_Bot(Reduced)
   m_TagString: Untagged
@@ -1110,6 +1111,17 @@ MonoBehaviour:
   enemyTag: Enemy
   arrow: {fileID: 1038592749489628, guid: c9a7a8998a12d7b46bece762361d0d82, type: 2}
   Player2: 0
+--- !u!114 &114285562304755192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1616814639062036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c9b3195fd62894eaa1b7c5fb265ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114647533961297276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1123,6 +1135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circle: {fileID: 1125951142783896}
   agent: {fileID: 195647951160862986}
+  dest: {x: 0, y: 0, z: 0}
 --- !u!114 &114754300123503790
 MonoBehaviour:
   m_ObjectHideFlags: 1
