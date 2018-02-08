@@ -5,12 +5,12 @@ using UnityEngine;
 public class BlameNekit : MonoBehaviour {
 
     //destination coordinates
-    int DoX = 0;
-    int DoZ = 0;
+    float DoX = 0;
+    float DoZ = 0;
 
     //Object coordinates
-    int UoX = 0;
-    int UoZ = 0;
+    float UoX = 0;
+    float UoZ = 0;
 
     //selected units #
     int selected_units = 0;
@@ -28,6 +28,15 @@ public class BlameNekit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        //Get coordinates from MoveByPlayer
+        DoX = GetComponent<MoveByPlayer>().dest.x;
+        DoZ = GetComponent<MoveByPlayer>().dest.z;
+
+        //Get coordinates from MoveByPlayer
+        UoX = transform.position.x;
+        UoZ = transform.position.z;
+
+
+    }
 }
