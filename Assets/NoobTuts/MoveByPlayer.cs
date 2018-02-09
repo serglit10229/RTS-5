@@ -22,6 +22,7 @@ public class MoveByPlayer : MonoBehaviour {
                 //GetComponent<UnityEngine.AI.NavMeshAgent>().isStopped = false;
                 GetComponent<UnityEngine.AI.NavMeshAgent>().destination = hit.point;
                 dest = hit.point;
+                Debug.Log("Move");
 
             }
         }

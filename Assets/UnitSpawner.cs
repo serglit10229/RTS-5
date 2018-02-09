@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 public class UnitSpawner : MonoBehaviour {
     // unit prefab
@@ -23,29 +24,8 @@ public class UnitSpawner : MonoBehaviour {
         Vector3 pos = transform.position;
 
         Instantiate(unit, new Vector3(x + pos.x, y + pos.y, z + pos.z), Quaternion.Euler(0.0f, 0.0f, 0.0f));
-        Debug.Log("Spawn");
-        while (unit.transform.localPosition.z <= 0.8)
-        {
-            Debug.Log("T1");
-            unit.transform.Translate(0,0, speed1);
-            if (unit.transform.localPosition.z >= 0.8)
-            {
-                Debug.Log("break1");
-                break;
-            }
-        }
-        if (unit.transform.localPosition.z >= 0.8)
-        {
-            while (unit.transform.localPosition.z <= 2.125 && unit.transform.localPosition.y >= 0.5)
-            {
-                Debug.Log("T2");
-                unit.transform.Translate(0, speed2, speed1);
-                if (unit.transform.localPosition.z >= 2.125 || unit.transform.localPosition.y <= 0.5)
-                {
-                    Debug.Log("break2");
-                    break;
-                }
-            }
-        }
+        unit.GetComponent<NavMeshAgent>().enabled = false;
+
+        unit.GetComponent<NavMeshAgent>().enabled = true;
     }
 }

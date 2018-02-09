@@ -1873,9 +1873,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unit: {fileID: 1616814639062036, guid: e98b4a1bfb5b66f45a6460ac62cfd8ae, type: 2}
   spawnRange: 20
-  x: 0.075
-  y: 0.5
-  z: -0.1
+  x: 0.04444419
+  y: -0.465
+  z: 2.114
   speed1: 0.2
   speed2: 0.2
 --- !u!114 &114959514053020618
