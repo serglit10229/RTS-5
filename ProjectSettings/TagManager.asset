@@ -7,6 +7,7 @@ TagManager:
   - Fire
   - SelectableUnit
   - Enemy
+  - MetalSpots
   layers:
   - Default
   - TransparentFX

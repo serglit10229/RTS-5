@@ -22,7 +22,9 @@ public class BuildMenu : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit)) {
-                if (hit.transform.name == "Ground") {
+                if (hit.transform.name == "Ground")
+                {
+                    Debug.Log(hit.transform.name);
                     // Refresh the instance position
                     instance.transform.position = hit.point;
                     
@@ -51,7 +53,7 @@ public class BuildMenu : MonoBehaviour {
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.name == "MetalSpots")
+                if (hit.transform.tag == "MetalSpots")
                 {
                     // Refresh the instance position
                     metalInstance.transform.position = hit.point;
