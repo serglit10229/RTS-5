@@ -17,11 +17,13 @@ public class MoveByPlayer : MonoBehaviour {
             // Find out where the user clicked in the 3D world
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 //GetComponent<UnityEngine.AI.NavMeshAgent>().isStopped = false;
                 GetComponent<UnityEngine.AI.NavMeshAgent>().destination = hit.point;
                 dest = hit.point;
+                Debug.Log("Move");
+                Debug.Log(dest);
 
             }
         }

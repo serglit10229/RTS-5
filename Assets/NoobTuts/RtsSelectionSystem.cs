@@ -22,7 +22,13 @@ public class RtsSelectionSystem : MonoBehaviour {
     // cache
     Camera cam;
 
+<<<<<<< HEAD
 	public int lsLength = 0;
+=======
+    public int arraysuka = 0;
+
+    public int lsLength = 0;
+>>>>>>> 46f537bb03e785b1aa91aa05e605027d906ec123
 
     void Start() {
         cam = GetComponent<Camera>();
@@ -65,11 +71,18 @@ public class RtsSelectionSystem : MonoBehaviour {
     }
 
     // call 'OnSelect' for multiple GameObjects
+<<<<<<< HEAD
    public void call_onselect_multi(List<GameObject> list) {
         foreach (var go in list)
             call_onselect(go);
 		lsLength = list.Count;
 		
+=======
+    public void call_onselect_multi(List<GameObject> list) {
+        foreach (var go in list)
+            call_onselect(go);
+            lsLength = list.Count;
+>>>>>>> 46f537bb03e785b1aa91aa05e605027d906ec123
     }
 
     // call ondeselect for each GameObject in 'list', unless its in 'ignore'
@@ -88,9 +101,10 @@ public class RtsSelectionSystem : MonoBehaviour {
         return null;
     }
 
-    List<GameObject> find_selected(Camera cam, Rect r) {
+    public List<GameObject> find_selected(Camera cam, Rect r) {
         // find all colliders in scene
         var all = FindObjectsOfType<Collider>().ToList();
+        
 
         if (checkVisibility) {
             // find the ones that are in-rect & active & visible
@@ -112,6 +126,10 @@ public class RtsSelectionSystem : MonoBehaviour {
             start.y = Screen.height - Input.mousePosition.y;
             visible = true;
         }
+
+        var selected = find_selected(cam, rect_around(start, cur));
+        arraysuka = selected.Count();
+        
 
         // multi selection in progress? update rect
         if (Input.GetMouseButton(mousebutton)) {
@@ -135,16 +153,17 @@ public class RtsSelectionSystem : MonoBehaviour {
                 }
             } else {
                 // find selected objects
-                var selected = find_selected(cam, rect_around(start, cur));
+                
 
                 // deselect -> select
                 call_ondeselect_multi_except(last, selected);
+                call_onselect_multi(selected);
                 call_onselect_multi(selected);
 
                 // save as last selection
                 last = selected;
             }
-
+            
             // don't draw the rectangle anymore
             visible = false;
         }
