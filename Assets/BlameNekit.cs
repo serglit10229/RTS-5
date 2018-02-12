@@ -37,6 +37,7 @@ public class BlameNekit : MonoBehaviour {
         UoX = transform.position.x;
         UoZ = transform.position.z;
 
-
+		selected_units = Camera.main.GetComponent<RtsSelectionSystem> ().lsLength;
+		Debug.Log ("Number of Units = " + selected_units);
     }
 }
