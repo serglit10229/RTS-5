@@ -16,6 +16,7 @@ public class BuildMenu : MonoBehaviour {
     GameObject metalInstance;
 
     void Update() {
+        /*
         //FACTORY
         if (instance != null) {
             // Find out the 3D world coordinates under the cursor
@@ -43,7 +44,7 @@ public class BuildMenu : MonoBehaviour {
             }
         }
 
-
+        */
 
         //METAL
         if (metalInstance != null)
@@ -51,7 +52,7 @@ public class BuildMenu : MonoBehaviour {
             // Find out the 3D world coordinates under the cursor
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 if (hit.transform.tag == "MetalSpots")
                 {
