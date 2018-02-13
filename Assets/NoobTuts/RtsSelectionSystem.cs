@@ -22,13 +22,12 @@ public class RtsSelectionSystem : MonoBehaviour {
     // cache
     Camera cam;
 
-<<<<<<< HEAD
 	public int lsLength = 0;
-=======
+
     public int arraysuka = 0;
 
     public int lsLength = 0;
->>>>>>> 46f537bb03e785b1aa91aa05e605027d906ec123
+
 
     void Start() {
         cam = GetComponent<Camera>();
@@ -71,18 +70,18 @@ public class RtsSelectionSystem : MonoBehaviour {
     }
 
     // call 'OnSelect' for multiple GameObjects
-<<<<<<< HEAD
+
    public void call_onselect_multi(List<GameObject> list) {
         foreach (var go in list)
             call_onselect(go);
 		lsLength = list.Count;
 		
-=======
+
     public void call_onselect_multi(List<GameObject> list) {
         foreach (var go in list)
             call_onselect(go);
             lsLength = list.Count;
->>>>>>> 46f537bb03e785b1aa91aa05e605027d906ec123
+
     }
 
     // call ondeselect for each GameObject in 'list', unless its in 'ignore'
